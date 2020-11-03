@@ -421,16 +421,20 @@ img {
   cursor: pointer;
 }
 
-.menu-btn.is-open .icon-cross {
+.menu-btn .icon-menu {
+  display: block;
+}
+
+.menu-btn .icon-cross {
   display: none;
 }
 
 .menu-btn.is-open .icon-menu {
-  display: block;
+  display: none;
 }
 
-.menu-btn .icon-menu {
-  display: none;
+.menu-btn.is-open .icon-cross {
+  display: block;
 }
 
 .menu-btn:hover, .menu-btn:focus {

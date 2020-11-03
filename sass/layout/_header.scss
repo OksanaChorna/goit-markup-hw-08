@@ -11,21 +11,19 @@
   border-width: 0;
   cursor: pointer;
 
-  // & .icon-cross {
-  //   // display: none; // Blackman
-  // }
-
-  &.is-open .icon-cross {
-    // display: block; // Blackman
-    display: none; // Blackman
+  .icon-menu {
+    display: block;
+  }
+  .icon-cross {
+    display: none;
   }
 
   &.is-open .icon-menu {
-    display: block;
+    display: none;
   }
 
-  & .icon-menu {
-    display: none;
+  &.is-open .icon-cross {
+    display: block;
   }
 
   &:hover,
