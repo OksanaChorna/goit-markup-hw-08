@@ -88,6 +88,13 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .features .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -754,29 +761,20 @@ img {
 }
 
 .features .list {
-  display: flex;
+  display: block;
 }
 
-.features-subtitle {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #212121;
-  margin-bottom: 10px;
+@media screen and (min-width: 768px) {
+  .features .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-.features-description {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-  color: #757575;
-}
-
-.features-list:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .features .list {
+    flex-wrap: nowrap;
+  }
 }
 
 .features-list::before {
@@ -789,6 +787,62 @@ img {
   background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .features-list:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-list {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-list:nth-child(2n) {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-list:nth-child(n + 3) {
+    margin-bottom: 0px;
+  }
+}
+
+.features-subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #212121;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .features-subtitle {
+    text-align: center;
+  }
+}
+
+.features-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .features-list:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .features-antenna::before {

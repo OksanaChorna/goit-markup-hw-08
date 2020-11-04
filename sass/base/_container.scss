@@ -27,13 +27,12 @@
       align-items: center;
     }
   }
-
-  //
-  // .header &,
-  // .features & {
-  //   display: flex;
-  //   align-items: center;
-  // }
+  .features & {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+  }
 
   // .footer & {
   //   display: flex;
