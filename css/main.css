@@ -865,6 +865,12 @@ img {
   padding-bottom: 94px;
 }
 
+@media screen and (max-width: 1199px) {
+  .do-section {
+    display: none;
+  }
+}
+
 .do-section .list {
   display: flex;
   align-items: center;
