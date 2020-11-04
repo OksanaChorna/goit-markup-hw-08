@@ -9,7 +9,7 @@
   border: none;
   border-width: 0;
   cursor: pointer;
-  background: white; // Blackman
+  background: $primary-background-color; // Blackman
 
   .icon-menu {
     display: block;
@@ -49,7 +49,9 @@
       height: 393px;
       padding-top: 60px;
       padding-bottom: 60px;
+      background-color: $primary-background-color;
       text-align: center;
+      border-top: 1px solid #ececec;
       border-bottom: 1px solid #ececec;
     }
   }
@@ -78,7 +80,7 @@
       margin-top: 60px;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       display: block;
       margin-left: 84px;
       padding: 21px 0;
@@ -88,7 +90,6 @@
       display: flex;
       align-items: center;
       margin-left: 286px;
-      padding: 0;
     }
   }
 }
@@ -159,12 +160,8 @@
     border-radius: 2px;
     justify-content: center;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       bottom: -1px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      bottom: 0px;
     }
   }
 }
@@ -188,7 +185,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     &:not(:last-child) {
       margin-bottom: 10px;
     }
@@ -197,7 +194,6 @@
   @media screen and (min-width: 1200px) {
     &:not(:last-child) {
       margin-right: 50px;
-      margin-bottom: 0;
     }
     display: inline-flex;
     align-items: center;
@@ -224,11 +220,7 @@
   margin-right: 10px;
   fill: $primery-description-color;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-right: 8px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    margin-right: 10px;
   }
 }
