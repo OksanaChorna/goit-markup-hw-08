@@ -1,7 +1,6 @@
 // BURGER
 
 .menu-btn {
-  background: white; // Blackman
   display: flex;
   padding: 0;
   margin: 0;
@@ -10,6 +9,7 @@
   border: none;
   border-width: 0;
   cursor: pointer;
+  background: white; // Blackman
 
   .icon-menu {
     display: block;
@@ -30,6 +30,7 @@
   &:focus {
     fill: $accent-color;
   }
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -55,20 +56,12 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 }
 
 .icon-close-burger {
   border: none;
   border-width: 0;
-
-  &:hover,
-  &:focus {
-    fill: $accent-color;
-    border: none;
-  }
 }
 // END BURGER
 
@@ -85,28 +78,37 @@
       margin-top: 60px;
     }
 
-    @media screen and (min-width: 1200) {
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin-left: 84px;
+      padding: 21px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
       display: flex;
       align-items: center;
-      margin-left: auto;
+      margin-left: 286px;
+      padding: 0;
     }
   }
 }
 
 .navigation {
-  // display: flex;
-  // align-items: center;
-
-  @media screen and (min-width: 768px) {
-    &-list {
-      display: flex;
+  @media screen and (max-width: 767px) {
+    &-item:not(:last-child) {
+      margin-bottom: 40px;
     }
   }
 
-  &-item:not(:last-child) {
-    margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
 
-    @media screen and (min-width: 768px) {
+    &-list {
+      display: flex;
+    }
+
+    &-item:not(:last-child) {
       margin-right: 50px;
     }
   }
@@ -136,6 +138,10 @@
       color: $accent-color;
     }
   }
+
+  &-list {
+    align-items: center;
+  }
 }
 
 .current {
@@ -148,13 +154,25 @@
     bottom: 0;
     width: 100%;
     height: 4px;
+    left: 0;
     background: $accent-color;
     border-radius: 2px;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      bottom: -1px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      bottom: 0px;
+    }
   }
 }
 
 .address-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: $main-font;
   font-style: normal;
   font-weight: 500;
@@ -164,9 +182,30 @@
   color: $primery-description-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
   @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+    display: inline-flex;
+    align-items: center;
+    /* justify-content: center; */
     font-size: 14px;
     line-height: 1.143;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   &:hover,
@@ -178,26 +217,18 @@
       fill: $accent-color;
     }
   }
-
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
-
-  @media screen and (min-width: 1200) {
-    display: inline-flex;
-    align-items: center;
-    /* justify-content: center; */
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
-  }
 }
 
 .envelope-icon,
 .smartphone-icon {
   margin-right: 10px;
   fill: $primery-description-color;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
 }
