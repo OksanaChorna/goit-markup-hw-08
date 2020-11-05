@@ -501,6 +501,7 @@ img {
     text-align: center;
     border-top: 1px solid #ececec;
     border-bottom: 1px solid #ececec;
+    z-index: 999;
   }
 }
 
@@ -953,11 +954,39 @@ img {
 }
 
 .team-list {
+  display: block;
   text-align: center;
-  width: 270px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (max-width: 767px) {
+  .team-list {
+    max-width: 450px;
+    margin: 0 auto 30px auto;
+  }
+  .team-list:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-list {
+    width: calc((100% - 30px) / 2);
+  }
+  .team-list:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+  .team-list:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list {
+    width: 270px;
+  }
 }
 
 .team-list-content {
@@ -969,9 +998,18 @@ img {
   background-color: #f5f4fa;
 }
 
-.our-team-list {
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .our-team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team-list {
+    flex-wrap: nowrap;
+  }
 }
 
 .clients-list {
@@ -1089,7 +1127,7 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.join {
+.footer-subt {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -1119,16 +1157,6 @@ img {
     display: flex;
     justify-content: center;
   }
-}
-
-.mail-form-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1199px) {
