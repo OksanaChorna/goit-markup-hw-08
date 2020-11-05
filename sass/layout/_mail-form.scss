@@ -1,6 +1,8 @@
 .mail-form {
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
 
   &-title {
     font-weight: 700;
@@ -13,11 +15,17 @@
   }
 
   &-wrapper {
-    margin-left: 93px;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 93px;
+    }
   }
 
   &-input {
-    width: 358px;
+    width: 100%;
     height: 50px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -33,7 +41,16 @@
     line-height: 1.25;
     letter-spacing: 0.03em;
     color: $primary-background-color;
-    margin-right: 12px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-right: 12px;
+    }
 
     &::placeholder {
       font-family: $main-font;
@@ -75,6 +92,10 @@
     color: #ffffff;
     /* transform: scale(1); */
     cursor: pointer;
+
+    @media screen and (max-width: 1199px) {
+      margin: 0 auto;
+    }
 
     &-svg {
       width: 24px;
